@@ -1,0 +1,182 @@
+//Nome: vinicius carvalho silva
+//Matricula: UC21100874
+//curso: Engenharia De Software
+
+#include <stdio.h> //é um cabeçalho da biblioteca padrão do C
+#include <string.h> //biblioteca para strlen e strcmp
+#include <stdlib.h>// biblioteca de formataçao
+#include <locale.h>// biblioteca de acentos
+#include <math.h>// biblioteca para operações matematicas 
+#include <conio.h>// biblioteca para para fornecer entrada / saída
+#include <time.h>//
+int main (){
+   //A função main pode retornar um inteiro para o sistema
+   //operacional
+    int A, B, C, D, E, F, G, H, I, i, J, K, L, M, N, O, P, Q; 
+	// declarando as variaveis que serão usadas
+    char nome[100];
+    // declarando uma variavel char para texto
+    printf ("Bem-vindos ao Cinema de Brasilia\n\n");  
+    // mensagem de boas vindas ao usuario
+        do{
+            printf("Digite a quantide de sessoes assistidas: \n\n");
+            //interação com o usuario para saber as sessões assistidas
+                scanf("%d", &A);
+                // lendo a quantidade de sessões assistidas
+            fflush(stdin);
+            //descarrega os buffers de saída de um fluxo de dados
+        if(A != 2)
+        //if será executado se booleano for verdadeiro, como não lhe foi atribuído valor, é falso
+            printf("Quantidade invalida!\n\n");
+            //validação do valor
+    }while(A != 2);
+
+            printf("Qual filme vc assistiu?:\n\n ");
+            //interação com usuario para saber o nome do filme
+                fgets(nome, 100, stdin);
+                //stdin dispositivo de entrada padrão
+                // fgets Para se ler uma string num arquivo
+            fflush(stdin);
+            //descarrega os buffers de saída de um fluxo de dados
+        if(strlen(nome) <= 1){
+        //if será executado se booleano for verdadeiro, como não lhe foi atribuído valor, é falso
+            printf("invalido!\n\n");
+            //validação do valor
+        }else{
+            printf ("Proxima pergunta...\n\n");
+            //validação do valor (caso acerte)
+        }
+    do{
+            printf ("Digite a quantidade de pessoas que assistiram o filme\n\n");
+            //interação com usuario para saber quantas pessoas assistiram o filme
+            scanf ("%d", &B);
+            //lendo a quantidade de pessoas no filme
+            
+    if (B<10){
+    //if será executado se booleano for verdadeiro, como não lhe foi atribuído valor, é falso
+            printf ("Minimo de 10 pessoas, tente novamete\n\n");
+            //validação caso tenha menos que 10 pessoas
+    }else{
+            printf ("Proxima etapa\n\n");
+            //validação caso tenha mais que 10 pessoas
+    }
+        }while(B<10);
+
+            printf("dessas %d, quantas era mulheres?\n\n", B);
+            //interação com usuario para saber quantas mulheres tinham
+            scanf("%d", &C);
+            //lendo a quantidade de mulheres
+
+     (D = B - C);
+     //calculo para saber a quantidade de homens 
+
+        printf("segue os dados do filme %s \n", nome); 
+        printf("|---------------------|\n");
+        printf("|-H------total------M-|\n");
+        printf("|%d-------%d--------%d|\n", D, B, C);
+        printf("|---------------------|\n");
+        //tabela com o total de homens e mulheres
+        
+system("pause");
+//pausar o sistema 
+system("cls");
+//limpar o cmd
+
+     printf("dessas %d mulheres quantas tinham entre 3 e 13 anos?\n\n", C);
+     //interação com o usuario para saber quantas mulheres tem entre 3 e 13
+       scanf("%d", &E);
+       // ler quantas mulheres tem entre 3 e 100
+    (F = C - E);
+    //calculo pra saber quantos adolescentes tem
+     printf("ainda das %d mulheres, quantas tem entre 14 e 17 anos?\n\n", F);
+     //interação com o usuario para saber quantas mulheres tem entre 14 e 17
+       scanf("%d", &G);
+       //ler quantas mulheres tem entre 14 e 100 
+    (H = F - G);
+    // calculo para saber a quantidade de adultos que tem
+     printf("dessas %d, quantas tinham entre 18 e 64 anos?\n\n", H);
+     //interação com o usuario para saber quantas mulheres tem entre 18 e 64
+       scanf("%d", &I);
+       //ler quantas mulheres tem entre 18 e 100 
+    (J = H - I);
+    //calculo para saber a quantidade de idosos que tem
+    
+     printf("Okay ...");
+     
+system("pause");
+//pausar o sistema 
+system("cls");
+//limpar o cmd
+     
+     printf("Desses %d homens, quantos tem entre 3 e 13 anos?\n\n", D);
+     //interação com o usuario para saber quantos homens tem entre 3 e 13 anos
+       scanf("%d", &K);
+       //ler quantos homens tem entre 3 e 13
+    (M = D - K);
+    //calculo pra saber quantos homens tem entre 14 e 100
+     printf("ainda dos %d homens, quantos tinham entre 14 e 17 anos?\n\n", M);
+     //interação com o usuario para saber quantos homens tem entre 14 e 17 anos
+       scanf("%d", &N);
+       //ler quantos homens tem entre 14 e 17
+    (O = M - N);
+    //calculo para saber quantos homens tem entre 18 e 100
+     printf("dessas %d, quantos tinham entre 18 e 64 anos?\n\n", O);
+     //interação com o usuario para saber quantos homens tem entre 18 e 64 anos
+       scanf("%d", &P);
+       //ler quantos homens tem entre 18 e 64
+    (Q = O - P);
+    //calculo pra saber quantos homens tem entre 64 e 100   
+    
+system("pause");
+//pausar o sistema
+system("cls");  
+//limpar o cmd
+
+    printf("Segue a tabela do filme %s\n", nome);
+    printf("___________________________________\n");
+    printf("|%d MULHERES - entre 3 e 13 anos   \n", E);
+    printf("|%d MULHERES - entre 14 e 17 anos  \n", G); 
+    printf("|%d MULHERES - entre 18 e 64 anos  \n", H);
+    printf("|%d MULHERES - entre 65 e 100 anos \n", J);
+    printf("|__________________________________\n");
+    printf("\n\n");
+    //tabela de idades das mulheres
+    
+     printf("Segue a tabela do filme %s\n", nome);
+    printf("___________________________________\n");
+    printf("|%d HOMENS - entre 3 e 13 anos   \n", K);
+    printf("|%d HOMENS - entre 14 e 17 anos  \n", N); 
+    printf("|%d HOMENS - entre 18 e 64 anos  \n", P);
+    printf("|%d HOMENS - entre 65 e 100 anos \n", Q);
+    printf("|__________________________________\n");
+    printf("\n\n");
+    //tabela de idade dos homens
+    
+    system("pause");
+//pausar o sistema 
+system("cls");
+//limpar o cmd
+
+  printf("Gerando 1 cupon aleatorio para o proximo filme...\n\n");
+  /* srand(time(NULL)) objetiva inicializar o gerador de números aleatórios
+  com o valor da função time(NULL). Este por sua vez, é calculado
+  como sendo o total de segundos passados desde 1 de janeiro de 1970
+  até a data atual.
+  Desta forma, a cada execução o valor da "semente" será diferente.
+  */
+ 
+  srand(time(NULL));
+  //srand(), que será responsável por alimentar a rand().
+  
+  for (i=0; i < 1; i++)
+  {
+    printf("%d ", rand() % 1000000);
+    //printar o cupon de desconto 
+  }
+  printf("este e seu cupon de desconto para o proximo filme, obrigado e volte sempre...");
+  //print finalizando o programa
+  getch();
+  //getch() espera que o usuário digite uma tecla e retorna este caractere
+  return 0;
+//finalizou a sua tarefa
+}
